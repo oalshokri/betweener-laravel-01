@@ -50,6 +50,7 @@ class AuthController extends Controller
     public function login(Request $request):JsonResponse
     {
 
+
         $validator = Validator::make($request->all(),[
             'email'=>'required|email',
             'password'=>'required'
@@ -67,7 +68,7 @@ class AuthController extends Controller
 
         if(!Auth::attempt($validated)){
             return response()->json([
-                'message' => 'something went wrong',
+                'message' => 'Invalid Credential',
             ],400);
         }
 
