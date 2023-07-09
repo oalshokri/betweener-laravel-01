@@ -46,8 +46,8 @@ Route::middleware('auth:sanctum')->group( function () {
     });
 
     Route::controller(FolloweeController::class)->group(function (){
-        Route::get('/followers','index');
-        Route::post('/followers','store');
+        Route::get('/follow','index');
+        Route::post('/follow','store');
     });
 });
 
