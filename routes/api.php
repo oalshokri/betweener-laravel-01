@@ -30,6 +30,7 @@ Route::middleware('auth:sanctum')->group( function () {
         Route::put('/update/{user}','updateLocation');
         Route::put('/fcm/{user}','updateFcm');
         Route::post('/search','search');
+        Route::get('/users/{user}','show');
     });
 
     Route::controller(ShareController::class)->group(function (){
