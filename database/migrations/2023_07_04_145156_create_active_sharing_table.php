@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->enum('type',['sender','receiver']);
+            $table->unique(['user_id','type']);
             $table->timestamps();
         });
     }
